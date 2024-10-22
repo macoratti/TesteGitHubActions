@@ -1,2 +1,2 @@
-﻿Console.WriteLine("\nHello, GitHub Actions\n");
-Console.ReadKey();
+﻿
+Console.WriteLine("\nHello, GitHub Actions\n");
