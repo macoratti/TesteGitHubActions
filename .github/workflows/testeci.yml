@@ -1,0 +1,25 @@
+﻿name : CI Testando github actions
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+   build:
+     runs-on: ubuntu-latest
+
+     steps:
+       - name: Checkout repository
+         uses: actions/checkout@v3
+
+       - name: Setup .NET
+         uses: actions/setup-dotnet@v3
+         with:
+           dotnet-version: '8.0.x'
+
+       - name: Build do projeto
+         run : dotnet build
+         
+       - name: Rodar o projeto
+         run : dotnet run      
